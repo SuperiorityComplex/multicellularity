@@ -131,6 +131,13 @@ void Cell::CellBirth(Cell &mother_cell) {
   growth=mother_cell.growth;
   eatprob=mother_cell.eatprob;
 
+  if(par.birth_mutations) {
+    std::cerr << RANDOM2();
+    mu *= RANDOM2();
+    chemmu *= RANDOM2();
+    eatprob *= RANDOM2();
+  }
+
   maintenance_fraction = mother_cell.maintenance_fraction; //must be copied for first time step of life
   k_mf_0 = mother_cell.k_mf_0;
   k_mf_A = mother_cell.k_mf_A;

@@ -7,7 +7,7 @@ mcs = 10000000
 #cells in blobs move at 0.0055 px/mcs
 # duration of season could then be larger than field size/ speed
 season_experiment = 1
-#season_duration = 100000
+# season_duration = 100000
 season_duration = 10000
 
 ### grid size ###
@@ -186,3 +186,6 @@ backupdir = backup
 readcolortable = false
 colortable_filename = ../data/circular.ctb
 #derived from circular colormap "twilight" on github
+
+# parameters for extension
+birth_mutations = true

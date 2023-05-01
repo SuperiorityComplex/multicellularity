@@ -56,6 +56,7 @@ class Parameter {
   int min_area_for_life;
   int key_lock_length;
   bool periodic_boundaries;
+  bool birth_mutations;
   int n_chem;
   double * diff_coeff;
   double * decay_rate;
