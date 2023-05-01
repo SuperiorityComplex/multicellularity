@@ -58,6 +58,8 @@ class Parameter {
   bool periodic_boundaries;
   bool birth_mutations;
   bool stochastic_pop_size;
+  bool different_mus;
+  bool different_chemmus;
   int n_chem;
   double * diff_coeff;
   double * decay_rate;

@@ -59,6 +59,8 @@ Parameter::Parameter() {
   periodic_boundaries = false;
   birth_mutations = false;
   stochastic_pop_size = false;
+  different_mus = false;
+  different_chemmus = false;
   n_chem = 1;
   diff_coeff = new double[1];
   diff_coeff[0] = 1e-13;
@@ -500,6 +502,8 @@ void Parameter::Read(const char *filename) {
   periodic_boundaries = bgetpar(fp, "periodic_boundaries", false, true);
   birth_mutations = bgetpar(fp, "birth_mutations", false, true);
   stochastic_pop_size = bgetpar(fp, "stochastic_pop_size", false, true);
+  different_mus = bgetpar(fp, "different_mus", false, true);
+  different_chemmus = bgetpar(fp, "different_chemmus", false, true);
   n_chem = igetpar(fp, "n_chem", 0, true);
   if(n_chem){
     diff_coeff = dgetparlist(fp, "diff_coeff", n_chem, true);

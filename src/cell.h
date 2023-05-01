@@ -393,12 +393,14 @@ public:
     return chemvecy;
   }
   inline double getChemMu(void){
-    //cout<<"numu: "<<mu<<endl;
-    return chemmu;
+    // cout << par.different_chemmus << endl;
+    // cout<<"numu: "<<(par.different_chemmus ? chemmu * RANDOM2() : chemmu )<<endl;
+    return par.different_chemmus ? chemmu * RANDOM2() :chemmu;
   }
   inline double getMu(void){
-    //cout<<"numu: "<<mu<<endl;
-    return mu;
+    // cout << par.different_mus << endl;
+    // cout<<"numu: "<<(par.different_mus ? mu * RANDOM2() : mu)<<endl; 
+    return par.different_mus ? mu * RANDOM2() : mu;
   }
   inline void setMu(double initmu){
     mu=initmu;
