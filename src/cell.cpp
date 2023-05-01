@@ -132,7 +132,6 @@ void Cell::CellBirth(Cell &mother_cell) {
   eatprob=mother_cell.eatprob;
 
   if(par.birth_mutations) {
-    std::cerr << RANDOM2();
     mu *= RANDOM2();
     chemmu *= RANDOM2();
     eatprob *= RANDOM2();

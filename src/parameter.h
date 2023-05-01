@@ -57,6 +57,7 @@ class Parameter {
   int key_lock_length;
   bool periodic_boundaries;
   bool birth_mutations;
+  bool stochastic_pop_size;
   int n_chem;
   double * diff_coeff;
   double * decay_rate;

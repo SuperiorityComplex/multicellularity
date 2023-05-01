@@ -41,7 +41,8 @@ extern std::mt19937_64 my_rng;
 
 //Declare distributions:
 extern std::uniform_real_distribution<double> my_unif_real_dist;
-extern std::uniform_real_distribution<double> my_unif_real_dist_scale;
+extern std::normal_distribution<double> my_unif_real_dist_scale;
+extern std::normal_distribution<double> my_unif_real_dist_population;
 
 // extern std::uniform_int_distribution<long> my_unif_int_dist; //not using this
 extern std::binomial_distribution<int> my_binomial_dist;
@@ -49,6 +50,7 @@ extern std::binomial_distribution<int> my_binomial_dist;
 int Seed(int seed);
 double RANDOM();
 double RANDOM2();
+double RANDOM3();
 long RandomNumber(long max);
 void AskSeed();
 int Randomize(void);
