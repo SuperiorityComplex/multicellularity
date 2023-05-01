@@ -247,10 +247,12 @@ TIMESTEP
             // reset food and gradient
             std::cerr << "Time = " << i << '\n';
             std::cerr << "End of season: there are " << dish->CountCells() << " cells" << '\n';
+            int originalCount = dish->CountCells();
             dish->ReproduceEndOfSeason();
             std::cerr << "After reproduction there are " << dish->CountCells() << " cells" << '\n';
             if(par.stochastic_pop_size) {
-              dish->RemoveCellsUntilPopIs(int(par.popsize * RANDOM3()));
+              std::cerr << "Popping until " << int(originalCount * RANDOM3()) << " cells" << '\n';
+              dish->RemoveCellsUntilPopIs(int(originalCount * RANDOM3()));
             } else {
               dish->RemoveCellsUntilPopIs(par.popsize);
             }

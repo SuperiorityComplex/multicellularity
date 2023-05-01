@@ -31,7 +31,7 @@ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
 std::mt19937_64 my_rng {};
 std::uniform_real_distribution<double> my_unif_real_dist(0., 1.); //Define distribution
 std::normal_distribution<double> my_unif_real_dist_scale(1., 0.5); //Define distribution
-std::normal_distribution<double> my_unif_real_dist_population(1.5, 0.5); //Define distribution
+std::normal_distribution<double> my_unif_real_dist_population(1., 0.25); //Define distribution
 std::binomial_distribution<int> my_binomial_dist;
 
 int Seed(int seed)
