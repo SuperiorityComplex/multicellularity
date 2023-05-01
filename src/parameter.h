@@ -60,6 +60,7 @@ class Parameter {
   bool stochastic_pop_size;
   bool different_mus;
   bool different_chemmus;
+  bool stochastic_fitness;
   int n_chem;
   double * diff_coeff;
   double * decay_rate;

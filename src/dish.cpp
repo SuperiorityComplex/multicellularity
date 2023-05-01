@@ -1375,7 +1375,9 @@ double Dish::FitnessFunction(int particles, double meanx, double meany)
   double fitness_food = ( particles + epsilon*h_food/(1.-2.*epsilon)  )/(particles + h_food/(1.-2.*epsilon)); //looks weird, it's not (if you plot it)
   double fitness_distance = 1. / ( 1. + pow( dist/h_dist , 2.) );
   // std::cerr << "particles: "<< particles <<", fitness food = " <<fitness_food<<", distance: "<<dist<<", fitness distance" << fitness_distance<<", tot = "<<fitness_food*fitness_distance<<'\n';
-  return fitness_food*fitness_distance;
+  // std::cerr << par.stochastic_fitness << endl;
+  // std::cerr << fitness_food*fitness_distance*(par.stochastic_fitness ? RANDOM4() : 1) << endl;
+  return fitness_food*fitness_distance*(par.stochastic_fitness ? RANDOM4() : 1);
   
 }
 //for linear gradient, linear fitness evaluation

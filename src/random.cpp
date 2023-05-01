@@ -32,6 +32,7 @@ std::mt19937_64 my_rng {};
 std::uniform_real_distribution<double> my_unif_real_dist(0., 1.); //Define distribution
 std::normal_distribution<double> my_unif_real_dist_scale(1., 0.5); //Define distribution
 std::normal_distribution<double> my_unif_real_dist_population(1., 0.25); //Define distribution
+std::normal_distribution<double> my_unif_real_dist_fitness(1., 0.25); //Define distribution
 std::binomial_distribution<int> my_binomial_dist;
 
 int Seed(int seed)
@@ -60,6 +61,11 @@ double RANDOM2(void)
 double RANDOM3(void)
 {
   return my_unif_real_dist_population(my_rng);
+}
+
+double RANDOM4(void)
+{
+  return my_unif_real_dist_fitness(my_rng);
 }
 
 

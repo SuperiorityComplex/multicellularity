@@ -59,6 +59,7 @@ Parameter::Parameter() {
   periodic_boundaries = false;
   birth_mutations = false;
   stochastic_pop_size = false;
+  stochastic_fitness = false;
   different_mus = false;
   different_chemmus = false;
   n_chem = 1;
@@ -502,6 +503,7 @@ void Parameter::Read(const char *filename) {
   periodic_boundaries = bgetpar(fp, "periodic_boundaries", false, true);
   birth_mutations = bgetpar(fp, "birth_mutations", false, true);
   stochastic_pop_size = bgetpar(fp, "stochastic_pop_size", false, true);
+  stochastic_fitness = bgetpar(fp, "stochastic_fitness", false, true);
   different_mus = bgetpar(fp, "different_mus", false, true);
   different_chemmus = bgetpar(fp, "different_chemmus", false, true);
   n_chem = igetpar(fp, "n_chem", 0, true);
